@@ -1,4 +1,4 @@
-package com.jjh.dispPortfolio;
+package com.camunda.myBPM.dispPortfolio;
 
 import org.camunda.bpm.application.ProcessApplication;
 import org.camunda.bpm.application.impl.ServletProcessApplication;

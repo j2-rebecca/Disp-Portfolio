@@ -1,4 +1,4 @@
-package com.jjh.dispPortfolio;
+package com.camunda.myBPM.dispPortfolio;
 
 import org.apache.ibatis.logging.LogFactory;
 import org.camunda.bpm.engine.runtime.ProcessInstance;
