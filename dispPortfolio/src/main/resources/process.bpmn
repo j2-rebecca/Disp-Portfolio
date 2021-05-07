@@ -14,7 +14,7 @@
     <bpmn:startEvent id="StartEvent_1" name="Need loan">
       <bpmn:outgoing>Flow_0py24c3</bpmn:outgoing>
     </bpmn:startEvent>
-    <bpmn:userTask id="Activity_16qb5l8" name="Fill in loan form">
+    <bpmn:userTask id="Activity_16qb5l8" name="Fill in loan form" camunda:formKey="embedded:app:forms/apply-loan.html">
       <bpmn:incoming>Flow_0py24c3</bpmn:incoming>
       <bpmn:outgoing>Flow_0w3siut</bpmn:outgoing>
     </bpmn:userTask>
@@ -49,10 +49,10 @@
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{replyOK}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_1ghrin6" sourceRef="Activity_025u7u9" targetRef="Event_0x3cf9k" />
-    <bpmn:task id="Activity_025u7u9" name="Receive money">
+    <bpmn:receiveTask id="Activity_025u7u9" name="Receive money">
       <bpmn:incoming>Flow_0kxd2n4</bpmn:incoming>
       <bpmn:outgoing>Flow_1ghrin6</bpmn:outgoing>
-    </bpmn:task>
+    </bpmn:receiveTask>
   </bpmn:process>
   <bpmn:process id="Process_1sk7fbr" isExecutable="false">
     <bpmn:laneSet id="LaneSet_0b74706">
@@ -130,11 +130,11 @@
     <bpmn:sequenceFlow id="Flow_0idymtu" sourceRef="Event_1x4ad1j" targetRef="Activity_1d8c8xn" />
     <bpmn:sequenceFlow id="Flow_10p75hn" sourceRef="Activity_1gy6n56" targetRef="Activity_0fe0fev" />
     <bpmn:sequenceFlow id="Flow_12jirkc" sourceRef="Activity_0tnemp9" targetRef="Activity_09adpwl" />
-    <bpmn:userTask id="Activity_1gy6n56" name="Approve complex loan">
+    <bpmn:userTask id="Activity_1gy6n56" name="Approve complex loan" camunda:formKey="embedded:app:forms/approve-loan.html">
       <bpmn:incoming>Flow_04qriy2</bpmn:incoming>
       <bpmn:outgoing>Flow_10p75hn</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:userTask id="Activity_0tnemp9" name="Approve simple loan">
+    <bpmn:userTask id="Activity_0tnemp9" name="Approve simple loan" camunda:formKey="embedded:app:forms/approve-loan.html">
       <bpmn:incoming>Flow_1i9pcek</bpmn:incoming>
       <bpmn:outgoing>Flow_12jirkc</bpmn:outgoing>
     </bpmn:userTask>
@@ -215,7 +215,7 @@
       <bpmndi:BPMNShape id="Event_0x3cf9k_di" bpmnElement="Event_0x3cf9k">
         <dc:Bounds x="1702" y="242" width="36" height="36" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_025u7u9_di" bpmnElement="Activity_025u7u9">
+      <bpmndi:BPMNShape id="Activity_123z052_di" bpmnElement="Activity_025u7u9">
         <dc:Bounds x="1460" y="220" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Participant_0xy55lr_di" bpmnElement="Participant_0xy55lr" isHorizontal="true">
